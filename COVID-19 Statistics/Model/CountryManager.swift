@@ -15,7 +15,7 @@ struct CountryManager {
     
     var delegate: ShowInformationVC?
     
-    func sendRequest(){
+    func sendRequest(for countryRow : Int){
         
         let urlString = "https://api.covid19api.com/summary"
         
@@ -31,10 +31,10 @@ struct CountryManager {
                     return
                 }
                 if let safeData = data {
-                    print(safeData)
-                    if let allInformation = self.parseJSON(safeData){
+                    print("safeData : \(safeData)")
+                    if let allInformation = self.parseJSON(safeData, countryArrayIndex: countryRow){
                         print(allInformation)
-                        self.delegate?.showCurrentUpdate(Update: allInformation)
+                       // self.delegate?.showCurrentUpdate(Update: allInformation)
                     }
                 }
                 
@@ -43,7 +43,7 @@ struct CountryManager {
         }
     }
     
-    func parseJSON(_ data: Data, countryArrayIndex : Int) -> InformationStructure? {
+    func parseJSON(_ data: Data, countryArrayIndex: Int) -> InformationStructure? {
         
         //Create a JSONDecoder
         let decoder = JSONDecoder()
@@ -54,14 +54,14 @@ struct CountryManager {
            // print("JSON")
             let Country = decodedData.countries[countryArrayIndex].country
             print(Country)
-            let NewConfirmed = decodedData.countries[countryArrayIndex].newConfirmed
-         //   print(NewConfirmed)
-            let TotalConfirmed = decodedData.countries[countryArrayIndex].totalConfirmed
-            let NewDeaths = decodedData.countries[countryArrayIndex].newDeaths
-            let TotalDeaths = decodedData.countries[countryArrayIndex].totalDeaths
-            let NewRecovered = decodedData.countries[countryArrayIndex].newRecovered
-            let TotalRecovered = decodedData.countries[countryArrayIndex].totalRecovered
-            let Date = decodedData.countries[countryArrayIndex].date
+//            let NewConfirmed = decodedData.countries[countryArrayIndex].newConfirmed
+//           print(NewConfirmed)
+//            let TotalConfirmed = decodedData.countries[countryArrayIndex].totalConfirmed
+//            let NewDeaths = decodedData.countries[countryArrayIndex].newDeaths
+//            let TotalDeaths = decodedData.countries[countryArrayIndex].totalDeaths
+//            let NewRecovered = decodedData.countries[countryArrayIndex].newRecovered
+//            let TotalRecovered = decodedData.countries[countryArrayIndex].totalRecovered
+//            let Date = decodedData.countries[countryArrayIndex].date
 
            // print(exchaingValue)
 

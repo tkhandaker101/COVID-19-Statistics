@@ -39,7 +39,7 @@ extension ViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         print(row)
-        statistics.sendRequest()
+        statistics.sendRequest(for: row)
        
     }
     
