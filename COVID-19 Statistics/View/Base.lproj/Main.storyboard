@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="COVID_19_Statistics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="covid-19-2-800x500-1" translatesAutoresizingMaskIntoConstraints="NO" id="wZI-Ub-cmu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ukg-Qc-yZG">
+                                <rect key="frame" x="0.0" y="124" width="414" height="408"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ofw-V0-8XE">
+                                        <rect key="frame" x="10" y="0.0" width="394" height="408"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country : " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NVp-wO-Gmj">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="46.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" red="1" green="0.91479981359296336" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Confirmed :" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-ii-AXP">
+                                                <rect key="frame" x="0.0" y="51.5" width="394" height="47"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" red="1" green="0.0489278907736862" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Confirmed :" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DHL-sd-l3D">
+                                                <rect key="frame" x="0.0" y="103.5" width="394" height="46.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Deaths :" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Yz4-Oj-wpW">
+                                                <rect key="frame" x="0.0" y="155" width="394" height="46.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Deaths :" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Xin-wq-19p">
+                                                <rect key="frame" x="0.0" y="206.5" width="394" height="46.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Recovered :" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MDU-3Y-Vbm">
+                                                <rect key="frame" x="0.0" y="258" width="394" height="47"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" red="0.14158935910000001" green="0.98036028679999998" blue="0.052623421650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TotalRecovered :" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cbZ-I2-rMc">
+                                                <rect key="frame" x="0.0" y="310" width="394" height="46.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date :" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="a3X-Bv-lUt">
+                                                <rect key="frame" x="0.0" y="361.5" width="394" height="46.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <constraints>
+                                    <constraint firstItem="ofw-V0-8XE" firstAttribute="top" secondItem="Ukg-Qc-yZG" secondAttribute="top" id="FH6-us-75F"/>
+                                    <constraint firstAttribute="trailing" secondItem="ofw-V0-8XE" secondAttribute="trailing" constant="10" id="YEE-Hj-iyW"/>
+                                    <constraint firstAttribute="bottom" secondItem="ofw-V0-8XE" secondAttribute="bottom" id="epa-2s-RKX"/>
+                                    <constraint firstItem="ofw-V0-8XE" firstAttribute="leading" secondItem="Ukg-Qc-yZG" secondAttribute="leading" constant="10" id="oJJ-5D-ARy"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay Home, Stay Safe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMc-a6-D1B">
+                                <rect key="frame" x="10" y="54" width="394" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="buw-6k-uvB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="30"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C22-L0-u2z">
+                                <rect key="frame" x="0.0" y="682" width="414" height="180"/>
+                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="p93-3l-kel"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wZI-Ub-cmu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4mC-Kj-5h5"/>
+                            <constraint firstItem="cMc-a6-D1B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Dh9-Pu-EAO"/>
+                            <constraint firstItem="C22-L0-u2z" firstAttribute="top" secondItem="Ukg-Qc-yZG" secondAttribute="bottom" constant="150" id="Dpy-FL-2Em"/>
+                            <constraint firstItem="Ukg-Qc-yZG" firstAttribute="top" secondItem="cMc-a6-D1B" secondAttribute="bottom" constant="10" id="GuR-or-3ps"/>
+                            <constraint firstItem="wZI-Ub-cmu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LZE-pR-Y8v"/>
+                            <constraint firstItem="cMc-a6-D1B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="OkI-8a-Wls"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cMc-a6-D1B" secondAttribute="trailing" constant="10" id="RWH-q4-yZz"/>
+                            <constraint firstItem="C22-L0-u2z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TMW-lL-ulP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wZI-Ub-cmu" secondAttribute="bottom" id="e2R-CN-ZYK"/>
+                            <constraint firstItem="Ukg-Qc-yZG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iF2-Dc-wvd"/>
+                            <constraint firstItem="C22-L0-u2z" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="j2k-89-06Y"/>
+                            <constraint firstItem="C22-L0-u2z" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qc6-c5-U4o"/>
+                            <constraint firstItem="Ukg-Qc-yZG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xxE-mA-Qun"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wZI-Ub-cmu" secondAttribute="trailing" id="zmt-Jw-GrB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countryNameLabel" destination="NVp-wO-Gmj" id="zxY-bh-CvM"/>
+                        <outlet property="currentDate" destination="a3X-Bv-lUt" id="hC0-RD-mWt"/>
+                        <outlet property="newConfirmLabel" destination="iAd-ii-AXP" id="fzW-8m-eOI"/>
+                        <outlet property="newDeathLabel" destination="Yz4-Oj-wpW" id="XKi-pr-HUs"/>
+                        <outlet property="newRecoverLabel" destination="MDU-3Y-Vbm" id="0Bj-VK-3mq"/>
+                        <outlet property="pickerView" destination="C22-L0-u2z" id="I3Q-rY-emx"/>
+                        <outlet property="totalConfirmLabel" destination="DHL-sd-l3D" id="c4F-8g-8NA"/>
+                        <outlet property="totalDeathLabel" destination="Xin-wq-19p" id="1pQ-rK-POf"/>
+                        <outlet property="totalRecoverLabel" destination="cbZ-I2-rMc" id="wNq-FC-2BU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="55.580357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="covid-19-2-800x500-1" width="800" height="500"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

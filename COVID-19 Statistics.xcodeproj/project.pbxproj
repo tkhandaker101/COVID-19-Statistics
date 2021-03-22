@@ -15,6 +15,8 @@
 		8377AD76260656FA0044E8C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8377AD74260656FA0044E8C5 /* LaunchScreen.storyboard */; };
 		8377AD81260656FA0044E8C5 /* COVID_19_StatisticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377AD80260656FA0044E8C5 /* COVID_19_StatisticsTests.swift */; };
 		8377AD8C260656FA0044E8C5 /* COVID_19_StatisticsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377AD8B260656FA0044E8C5 /* COVID_19_StatisticsUITests.swift */; };
+		8377ADBB260667CA0044E8C5 /* CountryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377ADBA260667CA0044E8C5 /* CountryManager.swift */; };
+		8377ADC026066D980044E8C5 /* InformationStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8377ADBF26066D980044E8C5 /* InformationStructure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		8377AD87260656FA0044E8C5 /* COVID-19 StatisticsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "COVID-19 StatisticsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8377AD8B260656FA0044E8C5 /* COVID_19_StatisticsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVID_19_StatisticsUITests.swift; sourceTree = "<group>"; };
 		8377AD8D260656FA0044E8C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8377ADBA260667CA0044E8C5 /* CountryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryManager.swift; sourceTree = "<group>"; };
+		8377ADBF26066D980044E8C5 /* InformationStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationStructure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,11 @@
 		8377AD68260656F90044E8C5 /* COVID-19 Statistics */ = {
 			isa = PBXGroup;
 			children = (
-				8377AD69260656F90044E8C5 /* AppDelegate.swift */,
 				8377AD6B260656F90044E8C5 /* SceneDelegate.swift */,
-				8377AD6D260656F90044E8C5 /* ViewController.swift */,
-				8377AD6F260656F90044E8C5 /* Main.storyboard */,
+				8377AD69260656F90044E8C5 /* AppDelegate.swift */,
+				8377ADA12606574C0044E8C5 /* Controller */,
+				8377ADA02606573D0044E8C5 /* View */,
+				8377AD9F260657310044E8C5 /* Model */,
 				8377AD72260656FA0044E8C5 /* Assets.xcassets */,
 				8377AD74260656FA0044E8C5 /* LaunchScreen.storyboard */,
 				8377AD77260656FA0044E8C5 /* Info.plist */,
@@ -126,6 +131,31 @@
 				8377AD8D260656FA0044E8C5 /* Info.plist */,
 			);
 			path = "COVID-19 StatisticsUITests";
+			sourceTree = "<group>";
+		};
+		8377AD9F260657310044E8C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8377ADBA260667CA0044E8C5 /* CountryManager.swift */,
+				8377ADBF26066D980044E8C5 /* InformationStructure.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8377ADA02606573D0044E8C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8377AD6F260656F90044E8C5 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8377ADA12606574C0044E8C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8377AD6D260656F90044E8C5 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +289,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8377AD6E260656F90044E8C5 /* ViewController.swift in Sources */,
+				8377ADC026066D980044E8C5 /* InformationStructure.swift in Sources */,
 				8377AD6A260656F90044E8C5 /* AppDelegate.swift in Sources */,
+				8377ADBB260667CA0044E8C5 /* CountryManager.swift in Sources */,
 				8377AD6C260656F90044E8C5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,11 +471,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K4A9T7D84R;
 				INFOPLIST_FILE = "COVID-19 Statistics/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Matrix-Soulutions.COVID-19-Statistics.COVID-19-Statistics";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.COVID-19-Statistics.COVID-19-Statistics";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -458,11 +491,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K4A9T7D84R;
 				INFOPLIST_FILE = "COVID-19 Statistics/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Matrix-Soulutions.COVID-19-Statistics.COVID-19-Statistics";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.COVID-19-Statistics.COVID-19-Statistics";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
