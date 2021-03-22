@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,ShowInformationVC {
+
+    @IBOutlet weak var stayhome: UILabel!
     @IBOutlet weak var countryNameLabel: UILabel!
     @IBOutlet weak var newConfirmLabel: UILabel!
     @IBOutlet weak var totalConfirmLabel: UILabel!
@@ -18,14 +20,33 @@ class ViewController: UIViewController {
     @IBOutlet weak var currentDate: UILabel!
     
     @IBOutlet weak var pickerView: UIPickerView!
-    let statistics = CountryManager()
+    var statistics = CountryManager()
+   
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        statistics.delegate = self
         pickerView.delegate = self
         pickerView.dataSource = self
        
+    }
+    func showCurrentUpdate(Update: FinalData) {
+        print("MAIN VIEW")
+        DispatchQueue.main.async {
+            
+            self.countryNameLabel.text = "Country : \(Update.countryName)"
+            self.newConfirmLabel.text = "New Confirmed : \(Update.newCase)"
+            self.totalConfirmLabel.text = "Total Confirmed : \(Update.totalCase)"
+            self.newDeathLabel.text = "New Death : \(Update.newDead)"
+            self.totalDeathLabel.text = "Total Death : \(Update.totalDead)"
+            self.newRecoverLabel.text = "New Recover : \(Update.newSurvive)"
+            self.totalRecoverLabel.text = "Total Recover : \(Update.totalSurvive)"
+            self.currentDate.text = " "
+            
+       
+        }
     }
 
 

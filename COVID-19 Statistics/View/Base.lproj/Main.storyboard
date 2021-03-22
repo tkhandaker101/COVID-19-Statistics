@@ -127,6 +127,7 @@
                         <outlet property="newDeathLabel" destination="Yz4-Oj-wpW" id="XKi-pr-HUs"/>
                         <outlet property="newRecoverLabel" destination="MDU-3Y-Vbm" id="0Bj-VK-3mq"/>
                         <outlet property="pickerView" destination="C22-L0-u2z" id="I3Q-rY-emx"/>
+                        <outlet property="stayhome" destination="cMc-a6-D1B" id="JR3-lq-5IQ"/>
                         <outlet property="totalConfirmLabel" destination="DHL-sd-l3D" id="c4F-8g-8NA"/>
                         <outlet property="totalDeathLabel" destination="Xin-wq-19p" id="1pQ-rK-POf"/>
                         <outlet property="totalRecoverLabel" destination="cbZ-I2-rMc" id="wNq-FC-2BU"/>

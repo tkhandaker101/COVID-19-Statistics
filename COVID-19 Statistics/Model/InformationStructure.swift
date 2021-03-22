@@ -4,6 +4,17 @@
 //   let welcome = try? newJSONDecoder().decode(Welcome.self, from: jsonData)
 
 import Foundation
+struct FinalData {
+    
+    let countryName: String
+    let newCase: Int
+    let totalCase: Int
+    let newDead: Int
+    let totalDead: Int
+    let newSurvive: Int
+    let totalSurvive: Int
+
+}
 
 // MARK: - Welcome
 struct InformationStructure: Codable {

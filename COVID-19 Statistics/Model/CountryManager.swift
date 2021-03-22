@@ -7,7 +7,7 @@
 
 import Foundation
 protocol ShowInformationVC {
-    func showCurrentUpdate(Update: InformationStructure)
+    func showCurrentUpdate(Update: FinalData)
 }
 struct CountryManager {
     
@@ -34,7 +34,7 @@ struct CountryManager {
                     print("safeData : \(safeData)")
                     if let allInformation = self.parseJSON(safeData, countryArrayIndex: countryRow){
                         print(allInformation)
-                       // self.delegate?.showCurrentUpdate(Update: allInformation)
+                       self.delegate?.showCurrentUpdate(Update: allInformation)
                     }
                 }
                 
@@ -43,7 +43,7 @@ struct CountryManager {
         }
     }
     
-    func parseJSON(_ data: Data, countryArrayIndex: Int) -> InformationStructure? {
+    func parseJSON(_ data: Data, countryArrayIndex: Int) -> FinalData? {
         
         //Create a JSONDecoder
         let decoder = JSONDecoder()
@@ -54,19 +54,19 @@ struct CountryManager {
            // print("JSON")
             let Country = decodedData.countries[countryArrayIndex].country
             print(Country)
-//            let NewConfirmed = decodedData.countries[countryArrayIndex].newConfirmed
-//           print(NewConfirmed)
-//            let TotalConfirmed = decodedData.countries[countryArrayIndex].totalConfirmed
-//            let NewDeaths = decodedData.countries[countryArrayIndex].newDeaths
-//            let TotalDeaths = decodedData.countries[countryArrayIndex].totalDeaths
-//            let NewRecovered = decodedData.countries[countryArrayIndex].newRecovered
-//            let TotalRecovered = decodedData.countries[countryArrayIndex].totalRecovered
-//            let Date = decodedData.countries[countryArrayIndex].date
+            let NewConfirmed = decodedData.countries[countryArrayIndex].newConfirmed
+           print(NewConfirmed)
+            let TotalConfirmed = decodedData.countries[countryArrayIndex].totalConfirmed
+            let NewDeaths = decodedData.countries[countryArrayIndex].newDeaths
+            let TotalDeaths = decodedData.countries[countryArrayIndex].totalDeaths
+            let NewRecovered = decodedData.countries[countryArrayIndex].newRecovered
+            let TotalRecovered = decodedData.countries[countryArrayIndex].totalRecovered
+            let Date = decodedData.countries[countryArrayIndex].date
 
            // print(exchaingValue)
 
-//            let  exchangeInformation = CoinData(asset_id_quote: currencyType, rate: exchaingValue)
-//            return exchangeInformation
+          let passData = FinalData(countryName: Country, newCase: NewConfirmed, totalCase: TotalConfirmed, newDead: NewDeaths, totalDead: TotalDeaths, newSurvive: NewRecovered, totalSurvive: TotalRecovered)
+           return passData
 
         } catch {
 
@@ -75,7 +75,7 @@ struct CountryManager {
             print(error)
             return nil
         }
-        return nil
+  
  }
     
     
